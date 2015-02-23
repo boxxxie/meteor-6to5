@@ -1,5 +1,7 @@
-var to5 = Npm.require('6to5');
-var handler = function (compileStep, isLiterate) {
+var to5 = Npm.require('babel');
+var handler = function (compileStep
+  //, isLiterate
+) {
 
   var source = compileStep.read().toString('utf8');
   var outputFile = compileStep.inputPath + ".js";

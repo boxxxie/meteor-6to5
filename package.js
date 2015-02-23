@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'sharlon:6to5',
+  name: 'boxxxie:babel',
   summary: 'Turn ES6+ code into vanilla ES5 so you can use next generation features in Meteor',
-  version: '0.0.1',
-  git: 'https://github.com/sbalbalosa/meteor-6to5.git'
+  version: '1.0.0',
+  git: 'https://github.com/boxxxie/meteor-6to5.git'
 });
 
 Package.registerBuildPlugin({
@@ -11,7 +11,7 @@ Package.registerBuildPlugin({
   sources: [
     'plugin/compile-6to5.js'
   ],
-  npmDependencies: {'6to5':'2.12.5'}
+  npmDependencies: {'babel':'4.4.5'}
 });
 
 Package.onUse(function(api) {
@@ -21,6 +21,6 @@ Package.onUse(function(api) {
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('sharlon:6to5');
+  api.use('boxxxie:babel');
   api.addFiles('sharlon:6to5-tests.js');
 });
